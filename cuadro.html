@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambio de Color de Cuadro</title>
+<style>
+  #miCuadro {
+    width: 200px;
+    height: 200px;
+    background-color: #f0f0f0;
+    cursor: pointer; /* Cambia el cursor a una mano al pasar por encima del cuadro */
+  }
+</style>
+</head>
+<body>
+
+<div id="miCuadro"></div>
+
+<script>
+// Función para cambiar el color del cuadro
+function cambiarColor() {
+  var cuadro = document.getElementById("miCuadro");
+  var colores = ["#ff6347", "#7fffd4", "#ffa07a", "#add8e6", "#f0e68c"]; // Lista de colores
+  var nuevoColor = colores[Math.floor(Math.random() * colores.length)]; // Selecciona un color aleatorio de la lista
+  cuadro.style.backgroundColor = nuevoColor; // Cambia el color de fondo del cuadro
+}
+
+// Agrega un evento de clic al cuadro para llamar a la función cambiarColor
+document.getElementById("miCuadro").addEventListener("click", cambiarColor);
+</script>
+
+</body>
+</html>
